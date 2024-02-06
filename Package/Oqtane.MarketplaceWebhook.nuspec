@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Oqtane.MarketplaceWebhook</id>
+    <version>1.0.0</version>
+    <authors>Oqtane Labs Inc</authors>
+    <owners>Oqtane Labs Inc</owners>
+    <title>Webhook</title>
+    <description>Marketplace Webhook</description>
+    <copyright>Oqtane Labs Inc</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/oqtane/oqtane.framework</projectUrl>
+    <icon>icon.png</icon>
+    <tags>oqtane module</tags>
+    <releaseNotes></releaseNotes>
+    <summary></summary>
+    <dependencies>
+      <dependency id="Oqtane.Framework" version="5.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\Client\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Client.Oqtane.dll" target="lib\net8.0" /> 
+    <file src="..\Client\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Client.Oqtane.pdb" target="lib\net8.0" /> 
+    <file src="..\Server\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Server.Oqtane.dll" target="lib\net8.0" /> 
+    <file src="..\Server\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Server.Oqtane.pdb" target="lib\net8.0" /> 
+    <file src="..\Shared\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Shared.Oqtane.dll" target="lib\net8.0" /> 
+    <file src="..\Shared\bin\Release\net8.0\Oqtane.MarketplaceWebhook.Shared.Oqtane.pdb" target="lib\net8.0" /> 
+    <file src="icon.png" target="" />
+  </files>
+</package>

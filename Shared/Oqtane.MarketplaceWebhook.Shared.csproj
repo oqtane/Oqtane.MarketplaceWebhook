@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>    
+    <Version>1.0.0</Version>
+    <Product>Oqtane.MarketplaceWebhook</Product>
+    <Authors>OqtaneLabs</Authors>
+    <Company>OqtaneLabs</Company>
+    <Description>Marketplace webhook</Description>
+    <Copyright>OqtaneLabs</Copyright>
+    <AssemblyName>Oqtane.MarketplaceWebhook.Shared.Oqtane</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Oqtane.Shared"><HintPath>..\..\oqtane.framework\Oqtane.Server\bin\Debug\net8.0\Oqtane.Shared.dll</HintPath></Reference>
+  </ItemGroup>
+
+</Project>
