@@ -11,6 +11,9 @@ namespace Oqtane.MarketplaceWebhook.Controllers
     [Route(ControllerRoutes.ApiRoute)]
     public class MarketplaceWebhookController : ModuleControllerBase
     {
+        // this is your account id assigned by Stripe
+        private readonly string accountId = "";
+
         public MarketplaceWebhookController(ILogManager logger, IHttpContextAccessor accessor) : base(logger, accessor) 
         {
             
@@ -23,7 +26,17 @@ namespace Oqtane.MarketplaceWebhook.Controllers
         {
             if (ModelState.IsValid)
             {
-                _logger.Log(LogLevel.Information, this, LogFunction.Create, "Webhook Added {Webhook}", Webhook);
+                // validate account id
+                if (Webhook.AccountId == accountId)
+                {
+
+                    _logger.Log(LogLevel.Information, this, LogFunction.Create, "Webhook Added {Webhook}", Webhook);
+                }
+                else
+                {
+                    _logger.Log(LogLevel.Error, this, LogFunction.Security, "Unauthorized Webhook Post Attempt {Webhook}", Webhook);
+                    HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
+                }
             }
             else
             {
